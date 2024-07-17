@@ -4,8 +4,8 @@ const Toolbar = () => {
   const [selectedRange, setSelectedRange] = useState("1w");
 
   return (
-    <div className="flex justify-between items-center mt-4 space-x-4 px-12">
-      <div className="flex gap-6">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-4 space-y-4 sm:space-y-0 sm:space-x-4 px-4 sm:px-12">
+      <div className="flex sm:gap-6">
         <button className="text-gray-500 hover:text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const Toolbar = () => {
         </button>
         <span className="material-icons">compare_arrows</span>
       </div>
-      <div className="flex space-x-2">
+      <div className="flex flex-wrap justify-center sm:justify-end space-y-2 sm:space-y-0 sm:space-x-2">
         {["1d", "3d", "1w", "1m", "6m", "1y", "max"].map((period) => (
           <button
             key={period}
